@@ -1,5 +1,6 @@
 <?php
 $titre = "Gestion des actifs";
+$styles = "styles/style.css";
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -1,5 +1,6 @@
 <?php
 $titre = "Menu principal";
+$styles = "styles/style.css";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
