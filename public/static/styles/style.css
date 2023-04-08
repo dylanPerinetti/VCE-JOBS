@@ -1,0 +1,239 @@
+/*****************************************/
+/*                   COMMUN              */
+/*****************************************/
+
+* {
+  box-sizing: border-box;
+  font-family: VolvoNovumRegular;
+  color: #53565A;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: -.1px;
+  background-color: #E1DFDDBD;
+}
+
+h1 {
+  font-family: 'VolvoBroad', sans-serif;
+  font-size: 70px;
+  color: white;
+  display: block;
+  width: 100%;
+  background-position: center;
+  margin: 0;
+  padding-top: 7%;
+  padding-bottom: 5%;
+}
+
+
+/*****************************************/
+/*                TOP-NAV                */
+/*****************************************/
+
+
+/*---- SEARCH ----*/
+
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+}
+
+/* The content */
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+/* Style the submit button */
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background-color: #E1DFDDBD;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #C8C9C7;
+}
+
+/*----------------*/
+
+.topnav {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #E1DFDDBD;
+}
+
+.topnav a {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: VolvoNovumRegular;
+  font-size: 16px;
+  letter-spacing: -.1px;
+  float: left;
+  display: block;
+  padding: 15px 24px;
+}
+
+.topnav a:hover {
+  background-color: #C8C9C7BD;
+}
+
+.topnav a .logo {
+  float: inline-start;
+}
+
+.topnav .search-button {
+  background-color: transparent;
+  float: right;
+  padding: 6px 10px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-button:hover {
+  background: #C8C9C7;
+}
+/*
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+*/
+
+
+/*****************************************/
+/*                 TABLE                 */
+/*****************************************/
+
+#myInput {
+  background-image: url('../img/search-icon.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #A7A8A9;
+  background-color: #C8C9C7;
+}
+
+th {
+  color: black;
+  background-color: #A7A8A9;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #E1DFDD;
+}
+
+td a,
+th a {
+  color: black;
+  text-decoration: none;
+}
+
+td a:hover,
+th a:hover {
+  text-decoration: underline;
+}
+
+/*****************************************/
+/*                   GRID                */
+/*****************************************/
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  margin: 10px;
+}
+
+/*****************************************/
+/*                   FOOTER              */
+/*****************************************/
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: block;
+  z-index: auto;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}

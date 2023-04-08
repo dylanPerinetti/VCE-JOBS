@@ -1,18 +1,16 @@
 <?php
 $titre = "Menu principal";
-$styles = "styles/style.css";
+$styles_sheet_name = "style.css";
+$static_repository = "static/";
+$chemin_imgage_h1 = "static/img/volvo-show-attachment-crawler-excavator-excavators-wheel-hydraulic-breakers-2326x800.jpg";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<?php require 'head.php'; ?>
+	<?php require 'static/head.php'; ?>
 </head>
 <body>
-	<?php require 'topnav.php'; ?>
-	<div class="page-container">
-		<div class="loader"></div>
-	</div>
-	
-	<?php require 'footer.php'; ?>
+	<?php require 'static/topnav.php'; ?>
+	<?php require 'static/footer.php'; ?>
 </body>
 </html>

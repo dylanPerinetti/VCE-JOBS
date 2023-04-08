@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'VolvoBroad';
+	src: url('fonts/VolvoBroadProDigital/VolvoBroadProDigital-webfont.woff');
+  font-display: block;
+}
+@font-face {
+	font-family: VolvoNovumRegular;
+	src: url('fonts/VolvoNovum-Regular/VolvoNovum-Regular.woff');
+  font-display: block;
+}
+@font-face {
+	font-family: VolvoNovumMedium;
+	src: url('fonts/VolvoNovum-Medium/VolvoNovum-Medium.woff');
+  font-display: block;
+}
