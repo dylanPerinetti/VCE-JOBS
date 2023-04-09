@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VCE-JOBS | <?=$titre ?></title>
+<title>VCE-Jobs | <?=$titre ?></title>
 <link rel="stylesheet" type="text/css" href="<?=$static_repository?>styles/load.css">
 <link rel="stylesheet" type="text/css" href="<?=$static_repository.'styles/'.$styles_sheet_name ?>">
 <link rel="stylesheet" type="text/css" href="<?=$static_repository?>styles/font.css">
@@ -10,5 +10,3 @@
 <link rel="preload" href="<?=$static_repository?>styles/fonts/VolvoNovum-Medium/VolvoNovum-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
 <link rel="preload" href="<?=$static_repository?>styles/fonts/VolvoNovum-Regular/VolvoNovum-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
 <link rel="preload" href="<?=$static_repository?>styles/fonts/fontawesome/fontawesome-webfont$4.woff" as="font" type="font/woff" crossorigin="anonymous">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

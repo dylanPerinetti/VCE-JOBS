@@ -7,7 +7,7 @@ $chemin_imgage_h1 = "static/img/volvo-used-equipment-2326x800.jpg";
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <?php require $static_repository'head.php'; ?>
+  <?php require $static_repository.'head.php'; ?>
   <style>
 
   body {
