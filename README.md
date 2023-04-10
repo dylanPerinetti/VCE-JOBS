@@ -1,6 +1,4 @@
 # VCE-JOBS
+This project is used to manage assets and users using a MySQL database and a web interface (coded in HTML5/CSS3,PHP & JavaScript)
 
-Visuel rapid -->
-
-https://user-images.githubusercontent.com/101599798/230799775-efac531b-8b82-4b9a-8ec8-f7003083b4fa.mp4
 
