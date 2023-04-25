@@ -1,5 +1,5 @@
 <div class="topnav">
-	<a class="logo" href="home.php"><img src="<?=$static_repository?>img/volvo-logo-word-mark.svg"></a>
+	<a class="logo" href="index.php"><img src="<?=$static_repository?>img/volvo-logo-word-mark.svg"></a>
 	<a href="actifs.php">Actifs</a>
 	<a href="utilisateurs.php">Utilisateurs</a>
 	<a href="#">Paramètres</a>
@@ -8,8 +8,7 @@
 	  	<!--span class="closebtn" onclick="closeSearch()" title="Fermer">x</span-->
 	  	<div class="overlay-content">
 	    	<form action="action_page.php">
-	      		<input type="text" class="input-field" placeholder="Rechercher..." name="search">
-	      		<button type="submit"></button>
+	      		<input type="text" class="input-field -serach" placeholder="Rechercher..." name="search">
 	    	</form>
 	  	</div>
 	</div>

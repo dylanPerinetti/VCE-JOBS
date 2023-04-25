@@ -5,7 +5,7 @@ $static_repository = "static/";
 $chemin_imgage_h1 = $static_repository."img/volvo-show-corporate-information-2326x800.jpg";
 
 function AfficherTableauActifs(){
-	for ($user_in_db=0; $user_in_db < 20; $user_in_db++) { 
+	for ($user_in_db=0; $user_in_db < 1000; $user_in_db++) { 
 		echo "<tr class=\"spacer\"></tr>";
 		echo "<tr>\n\t<td>".$user_in_db."</td>";
 		echo "\n\t<td><a href=\"device-info.php?ObjectName=TESTE\" >Test n°".$user_in_db."</a></td>";
@@ -25,7 +25,7 @@ function AfficherTableauActifs(){
 	<?php require $static_repository.'topnav.php'; ?>
 	<div class="row">
 		<div class="column medium">	
-			<input type="search" class="input-field" id="myInput" onkeyup="colSearch()" placeholder="Rechercher un nom d'utilisateur..." title="Rechercher un actif">
+			<input type="search" class="input-field -serach" id="myInput" onkeyup="colSearch()" placeholder="Rechercher un nom d'utilisateur..." title="Rechercher un actif">
 			<!--button class="sort-button" onclick="sortTable()">Trie</button-->
 			<table>
 			  <tr class="header">

@@ -6,6 +6,7 @@ input[type=search] {
   border-radius: 5px;
   box-shadow: 0 0 2px #E1DFDDBD;
   width: 160px;
+  float: left;
   margin-bottom: 50px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
@@ -13,7 +14,7 @@ input[type=search] {
 
 /* When the input field gets focus, change its width to 100% */
 input[type=search]:focus {
-  width: 70%;
+  width: 50%;
 }
 
 .sort-button{
@@ -47,29 +48,27 @@ th {
 
 th:nth-child(1),
 td:nth-child(1) {
+  text-align: center;
   width: 10%;
 }
+
 th:nth-child(2),
-td:nth-child(2) {
-  width: 30%;
-}
+td:nth-child(2) {width: 30%;}
+
 th:nth-child(3),
-td:nth-child(3) {
-  width: 25%;
-}
+td:nth-child(3) {width: 25%;}
+
 th:nth-child(4),
-td:nth-child(4) {
-  width: 25%;
-}
+td:nth-child(4) {width: 25%;}
+
 th:nth-child(5),
-td:nth-child(5) {
-  width: 10%;
-}
+td:nth-child(5) {text-align: center;}
 
 td {
   background-color: white;
   text-transform: capitalize;
 }
+
 td:first-child {
   width: 10%;
   border-top-left-radius: 5px;
@@ -80,6 +79,11 @@ td:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 2px 0px 2px #E1DFDDBD;
+}
+
+td a:hover,
+td a:hover>p {
+  color: #000000;
 }
 
 .spacer {
@@ -93,6 +97,10 @@ td:last-child {
   text-shadow: 0 0 5px;
   text-transform: uppercase;
   font-size: 30px;
+  cursor: pointer;
+}
+.statut:hover {
+  font-size: 35px;
 }
 .red { color: red; }
 .green{color: green;}
@@ -114,7 +122,12 @@ td:last-child {
   text-transform: uppercase;
 }
 
-
+.points {
+  font-size: 40px;
+}
+.points:hover {
+  font-size: 45px;
+}
 /*tr:hover {
   background-color: #E1DFDDBD;
 }*/

@@ -1,3 +1,4 @@
+
 /*****************************************/
 /*                   COMMUN              */
 /*****************************************/
@@ -28,10 +29,7 @@ h1 {
   padding-bottom: 5%;
 }
 
-.input-field {
-  background-image: url('../img/search-icon.svg');
-  background-position: 10px center;
-  background-repeat: no-repeat;
+input {
   border-radius: 10px;
   width: 75%;
   font-size: 16px;
@@ -39,13 +37,18 @@ h1 {
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
+.-serach {
+  background-image: url('../img/search-icon.svg');
+  background-position: 10px center;
+  background-repeat: no-repeat;
+}
 
 /*****************************************/
 /*                TOP-NAV                */
 /*****************************************/
 
 
-/*---- SEARCH ----*/
+/*---- OVERLAY ----*/
 
 /* The overlay effect with black background */
 .overlay {
@@ -154,8 +157,8 @@ h1 {
 
 .medium {
   border-radius: 5px;
-  margin: 5%;
-  padding: 5%;
+  margin: 3%;
+  padding: 3%;
   background-color: #FFFFFFAA;
   box-shadow: 0 0 7px #E1DFDD;
 }
@@ -165,6 +168,8 @@ h1 {
 /*****************************************/
 
 .scroll-area {
+  box-shadow: 0px -1px 0px #E1DFDDAA;
+  border-radius: 5px;
   display: block;
   height:500px;
   overflow:auto;

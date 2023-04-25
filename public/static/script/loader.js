@@ -5,4 +5,3 @@ window.addEventListener('load', () => {
     loader_text.classList.add('fondu-out');
     loader_text.style.display = "none";
 });
- 
