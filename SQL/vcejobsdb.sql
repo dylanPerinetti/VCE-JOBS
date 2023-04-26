@@ -1,53 +1,48 @@
--- MySQL Script created by DylanPerinetti
--- Tue Apr 25 09:31:21 2023
--- Model: New Model    Version: 1.0
+-- MySQL Script created by dylanPerinetti
+-- Wed Apr 26 09:39:05 2023
+-- Model: New Model    Version: 1.2
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema vcedb
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `vcedb` DEFAULT CHARACTER SET utf8 ;
+USE `vcedb` ;
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Table `vcedb`.`vce_user_profil_type`
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_user_profil_type` ;
 
--- -----------------------------------------------------
--- Table `mydb`.`vce_user_profil_type`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_user_profil_type` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_user_profil_type` (
-  `idvce_user_profil_type` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_user_profil_type` (
+  `idvce_user_profil_type` INT NOT NULL AUTO_INCREMENT,
   `vce_user_profil_typecol` VARCHAR(45) NULL,
   PRIMARY KEY (`idvce_user_profil_type`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_user_statut`
+-- Table `vcedb`.`vce_user_statut`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_user_statut` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_user_statut` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_user_statut` (
-  `idvce_user_statut` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedbvcedbvcedb`.`vce_user_statut` (
+  `idvce_user_statut` INT NOT NULL AUTO_INCREMENT,
   `vce_user_statut_name` VARCHAR(45) NULL,
   PRIMARY KEY (`idvce_user_statut`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_user`
+-- Table `vcedb`.`vce_user`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_user` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_user` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_user` (
-  `idvce_user` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_user` (
+  `idvce_user` INT NOT NULL AUTO_INCREMENT,
   `vce_user_fname` VARCHAR(45) NULL,
   `vce_user_lname` VARCHAR(256) NULL,
   `vce_user_vdn_id` VARCHAR(7) NULL,
@@ -60,24 +55,24 @@ CREATE TABLE IF NOT EXISTS `mydb`.`vce_user` (
   INDEX `fk_vce_user_vce_user_statut1_idx` (`vce_user_idstatut` ASC) VISIBLE,
   CONSTRAINT `fk_vce_user_vce_user_profil_type1`
     FOREIGN KEY (`vce_user_idprofil_type`)
-    REFERENCES `mydb`.`vce_user_profil_type` (`idvce_user_profil_type`)
+    REFERENCES `vcedb`.`vce_user_profil_type` (`idvce_user_profil_type`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_vce_user_vce_user_statut1`
     FOREIGN KEY (`vce_user_idstatut`)
-    REFERENCES `mydb`.`vce_user_statut` (`idvce_user_statut`)
+    REFERENCES `vcedb`.`vce_user_statut` (`idvce_user_statut`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_user_history`
+-- Table `vcedb`.`vce_user_history`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_user_history` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_user_history` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_user_history` (
-  `idvce_user_history` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_user_history` (
+  `idvce_user_history` INT NOT NULL AUTO_INCREMENT,
   `vce_user_history_date_hiring` DATE NULL,
   `vce_user_history_date_leaving` DATE NULL,
   `vce_iduser` INT NOT NULL,
@@ -86,30 +81,30 @@ CREATE TABLE IF NOT EXISTS `mydb`.`vce_user_history` (
   INDEX `fk_vce_user_history_vce_user_idx` (`vce_iduser` ASC) VISIBLE,
   CONSTRAINT `fk_vce_iduser`
     FOREIGN KEY (`vce_iduser`)
-    REFERENCES `mydb`.`vce_user` (`idvce_user`)
+    REFERENCES `vcedb`.`vce_user` (`idvce_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_device_brand`
+-- Table `vcedb`.`vce_device_brand`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_device_brand` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_device_brand` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_brand` (
-  `idvce_device_brand` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_device_brand` (
+  `idvce_device_brand` INT NOT NULL AUTO_INCREMENT,
   `vce_device_brand_name` VARCHAR(45) NULL,
   PRIMARY KEY (`idvce_device_brand`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_device_type`
+-- Table `vcedb`.`vce_device_type`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_device_type` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_device_type` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_type` (
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_device_type` (
   `idvce_device_type` INT NOT NULL,
   `vce_device_type_name` VARCHAR(45) NULL,
   PRIMARY KEY (`idvce_device_type`))
@@ -117,12 +112,12 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_device_model`
+-- Table `vcedb`.`vce_device_model`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_device_model` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_device_model` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_model` (
-  `idvce_device_model` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_device_model` (
+  `idvce_device_model` INT NOT NULL AUTO_INCREMENT,
   `vce_device_model_name` VARCHAR(45) NULL,
   `vce_device_idbrand` INT NOT NULL,
   `vce_device_idtype` INT NOT NULL,
@@ -131,36 +126,36 @@ CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_model` (
   INDEX `fk_vce_device_model_vce_device_type1_idx` (`vce_device_idtype` ASC) VISIBLE,
   CONSTRAINT `fk_vce_device_model_vce_device_brand1`
     FOREIGN KEY (`vce_device_idbrand`)
-    REFERENCES `mydb`.`vce_device_brand` (`idvce_device_brand`)
+    REFERENCES `vcedb`.`vce_device_brand` (`idvce_device_brand`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_vce_device_model_vce_device_type1`
     FOREIGN KEY (`vce_device_idtype`)
-    REFERENCES `mydb`.`vce_device_type` (`idvce_device_type`)
+    REFERENCES `vcedb`.`vce_device_type` (`idvce_device_type`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_device_statut`
+-- Table `vcedb`.`vce_device_statut`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_device_statut` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_device_statut` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_statut` (
-  `idvce_device_statut` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_device_statut` (
+  `idvce_device_statut` INT NOT NULL AUTO_INCREMENT,
   `vce_device_statut_name` VARCHAR(45) NULL,
   PRIMARY KEY (`idvce_device_statut`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_device`
+-- Table `vcedb`.`vce_device`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_device` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_device` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_device` (
-  `idvce_device` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_device` (
+  `idvce_device` INT NOT NULL AUTO_INCREMENT,
   `vce_device_serial_number` VARCHAR(45) NULL,
   `vce_device_date_purchase` DATE NULL,
   `vce_device_date_end_guaranty` DATE NULL,
@@ -176,29 +171,29 @@ CREATE TABLE IF NOT EXISTS `mydb`.`vce_device` (
   INDEX `fk_vce_device_vce_device_statue1_idx` (`vce_device_idstatut` ASC) VISIBLE,
   CONSTRAINT `fk_vce_device_vce_user1`
     FOREIGN KEY (`vce_user_iduser`)
-    REFERENCES `mydb`.`vce_user` (`idvce_user`)
+    REFERENCES `vcedb`.`vce_user` (`idvce_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_vce_device_vce_device_model1`
     FOREIGN KEY (`vce_device_idmodel`)
-    REFERENCES `mydb`.`vce_device_model` (`idvce_device_model`)
+    REFERENCES `vcedb`.`vce_device_model` (`idvce_device_model`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_vce_device_vce_device_statue1`
     FOREIGN KEY (`vce_device_idstatut`)
-    REFERENCES `mydb`.`vce_device_statut` (`idvce_device_statut`)
+    REFERENCES `vcedb`.`vce_device_statut` (`idvce_device_statut`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`vce_device_history`
+-- Table `vcedb`.`vce_device_history`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`vce_device_history` ;
+DROP TABLE IF EXISTS `vcedb`.`vce_device_history` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_history` (
-  `idvce_device_history` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `vcedb`.`vce_device_history` (
+  `idvce_device_history` INT NOT NULL AUTO_INCREMENT,
   `vce_device_history_date_assigne` DATE NULL,
   `vce_device_history_date_return` DATE NULL,
   `vce_device_history_iduser` INT NOT NULL,
@@ -207,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`vce_device_history` (
   INDEX `fk_vce_device_history_vce_device1_idx` (`vce_device_idvce_device` ASC) VISIBLE,
   CONSTRAINT `fk_vce_device_history_vce_device1`
     FOREIGN KEY (`vce_device_idvce_device`)
-    REFERENCES `mydb`.`vce_device` (`idvce_device`)
+    REFERENCES `vcedb`.`vce_device` (`idvce_device`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
